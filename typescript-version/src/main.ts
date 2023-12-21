@@ -8,6 +8,11 @@ import '@core/scss/template/index.scss'
 import '@layouts/styles/index.scss'
 import '@styles/styles.scss'
 import { createPinia } from 'pinia'
+import AutoComplete from 'primevue/autocomplete'
+import PrimeVue from 'primevue/config'
+import 'primevue/resources/primevue.min.css'
+
+import 'primevue/resources/themes/saga-blue/theme.css'
 import { createApp } from 'vue'
 
 loadFonts()
@@ -19,6 +24,10 @@ const app = createApp(App)
 app.use(vuetify)
 app.use(createPinia())
 app.use(router)
+app.use(PrimeVue)
+
+// component
+app.component('PrimeVueAutoComplete', AutoComplete)
 
 // Mount vue app
 app.mount('#app')

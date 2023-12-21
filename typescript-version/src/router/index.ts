@@ -13,6 +13,10 @@ const router = createRouter({
           component: () => import('../pages/dashboard.vue'),
         },
         {
+          path: 'test',
+          component: () => import('../pages/myComponent.vue'),
+        },
+        {
           path: 'account-settings',
           component: () => import('../pages/account-settings.vue'),
         },
@@ -36,6 +40,12 @@ const router = createRouter({
           path: 'form-layouts',
           component: () => import('../pages/form-layouts.vue'),
         },
+
+        // {
+        //   path: 'html-routing',
+        //   name: 'html-routing.html',
+        //   component: () => import('../components/'),
+        // },
       ],
     },
     {
@@ -57,6 +67,7 @@ const router = createRouter({
       ],
     },
   ],
+
 })
 
 export default router
